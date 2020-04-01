@@ -22,9 +22,9 @@
 
 Please note: I have made the description of the problem and solution vague to make this notebook difficult to search for.
 
-This projects was part of a short case study. I examined the potential savings in labour hours that could be gained by pooling riders into vehicles through a ride sharing model. 
+This projects was part of a short case study conducted as part of a job interview process. I examined the potential savings in labour hours that could be gained by pooling riders into vehicles through a ride sharing model. 
 
-I used taxi cab data from a specific month in a specific year to implement my pooled vehicle rider algorithm and validate the approach
+I used taxi data from a specific month in a specific year to implement my pooled vehicle rider algorithm and validate the approach.
 
 
 
