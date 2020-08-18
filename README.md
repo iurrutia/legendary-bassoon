@@ -3,13 +3,15 @@
 ---
 ## Contents
 
-[1. The problem](#problem)
+[The problem](#problem)
 
-[2. Approach](#approach)
+[Part 1 Approach](#1approach)
 
-[3. Evaluating the approach](#exa)
+[Part 2 Approach](#2approach)
 
-[4. Summary and Future Directions](#future)
+[Evaluating the approach](#exa)
+
+[Summary and Future Directions](#future)
 
 
 ---
@@ -20,16 +22,32 @@
 
 # <a name="problem">The problem</a>
 
-Please note: I have made the description of the problem and solution vague to make this notebook difficult to search for.
+Please note: I have made the description of the problem and solution purposely vague to make this notebook difficult to search for.
 
-This projects was part of a short case study conducted as part of a job interview process. I examined the potential savings in labour hours that could be gained by pooling riders into vehicles through a ride sharing model. 
+This repo has has code that solves different aspects of vehicle routing problems. 
 
-I used taxi data from a specific month in a specific year to implement my pooled vehicle rider algorithm and validate the approach.
+Part 1:
+The first is an implementation of an optimization problems that addresses vehicle scheduling within each cluster. 
+
+Part 2:
+The second is an EDA of some easily searchable vehicle data, with some 'back of the envelope' calculations to approximate efficiency gains from clustering ride requests. . 
+
+These two components do not currently work together.
+To merge the two components:
+- Coordinates need to be standardized
+- Distance metrics need to be standardized
+- Some quick data wrangling should suffice to standardize the df format (no derived variables are needed)
 
 
+# <a name="1approach">Part 1 Approach</a>
+
+The local vehicle scheduling problem (given advanced knowledge of pickup/dropoff ride requests) can be found here:
+[Link to .py script](https://github.com/iurrutia/legendary-bassoon/blob/master/local_routing/local_routing.py)
+
+The script finds the min number of vehicles required to service the ride requests using a binary search over possible candidate solutions. Note that this approach searches for feasibility and not optimality (thus there is no objective function in the linear program). The algorithm currently assumes Euclidean distances.
 
 
-# <a name="approach">Approach</a>
+# <a name="2approach">Part 2 Approach</a>
 
 I proposed an algorithm which does the following:
 
