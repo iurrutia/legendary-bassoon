@@ -41,7 +41,10 @@ To merge the two components:
 
 # <a name="1approach">Part 1 Approach</a>
 
-The script finds the min number of vehicles required to service a set of ride requests using a binary search over possible candidate solutions.
+The script finds the min number of vehicles required to service a set of ride requests using a binary search over possible candidate solutions. 
+
+Here's the script: [LINK!](https://github.com/iurrutia/legendary-bassoon/blob/master/local_routing/local_routing.py)
+
 
 My script is an IP formulation (solved with PySCIPOpt) that looks for a feasible solution that satisfies all trip requests with k cars. I perform a binary search to find the smallest value k such that there exists a feasible solution. I assume that k ≤ p, where p is the number of clients, that pickups and dropoffs take zero time, and that all distances can be rounded to the nearest integer. The program creates itineraries (if feasible solutions are found), until it finds the smallest k for which a feasible solution exists, at which point it also prints out a message “Feasible itinerary achieved with k vehicles. No feasible solutions with fewer vehicles.” 
 
@@ -50,10 +53,10 @@ The constraints are explained in the script, which is heavily commented. The bro
 Let N be the set of all nodes: pick-up and drop-off locations $N_{pu}$, $N_{do}$, a source node 0, and K sink nodes, $N_{sinks}$. Variable $x_{i,j}$ equals 1 if the edge (i,j) is used by a car in a tour, and equals zero otherwise. Variable $y_{i,j}$ equals 1 if car k visits node i and is zero otherwise. Variable wi is the time at which node i is departed in the final itinerary, and ci is the number of people in the car that visits node i when it departs node i, M
 is ‘a very big number’ (functions as ‘+ infinity’), $E_i$ and $L_i$ are the upper and lower bounds of node i’s time window, $t_{i,j}$ is the time it takes to travel from i to j, and $d_i =1$ if i ∈ $N_{pu}$, $d_i =−1$ if i ∈ $N_{do}$, and $d_i =0$ otherwise. 
 
+
 Note that this approach searches for feasibility and not optimality (thus there is no objective function in the linear program). The algorithm currently assumes Euclidean distances. 
 
 
-The local vehicle scheduling problem (given advanced knowledge of pickup/dropoff ride requests) can be found here:
 
 
 
