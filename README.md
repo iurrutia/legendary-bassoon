@@ -27,10 +27,10 @@ Please note: I have made the description of the problem and solution purposely v
 This repo has code that solves different aspects of vehicle routing problem variations. Namely, I'm interesed in understanding the potential benefits of clustering ride requests.
 
 Part 1:
-The first a script that solves vehicle scheduling for a small number of ride requests (e.g. for ride requests that are clustered together). I reformulated the problem as an optimization problem, and then implemented a script that builds the problem and finds a solution.
+Part 1 is a script that solves vehicle scheduling for a small number of ride requests (e.g. for ride requests that are clustered together). I reformulated the problem as an optimization problem, and then implemented a script that builds the problem and finds a solution.
 
 Part 2:
-The second is an EDA of some easily searchable vehicle data, with some 'back of the envelope' calculations to approximate efficiency gains from clustering ride requests. 
+The second part is an EDA of some easily searchable vehicle data, with some 'back of the envelope' calculations to approximate efficiency gains from clustering ride requests. 
 
 These two components do not currently work together.
 To merge the two components:
