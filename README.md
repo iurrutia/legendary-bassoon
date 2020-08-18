@@ -24,7 +24,7 @@
 
 Please note: I have made the description of the problem and solution purposely vague to make this notebook difficult to search for.
 
-This repo has has code that solves different aspects of vehicle routing problems. 
+This repo has code that solves different aspects of vehicle routing problem variations. 
 
 Part 1:
 The first is an implementation of an optimization problems that addresses vehicle scheduling within each cluster. 
